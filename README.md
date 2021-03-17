@@ -1,3 +1,3 @@
-# Python 3.9
+# A web app to check for food discounts in your area!
 
-A web app to check for discounts in your area
+Worked on and deisigned by Merissa Bridgeman and Jordan Torres
