@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title> 500 </title>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="../static/about.css">
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="error-message-container">
+        <div class="row error-message">
+            <h2 class="error-heading ">500! Oops! Server Error</h2>
+            <h3 class="error-heading ">Let’s take you home!</h3>
+            <button class="error-button " href="">Home</button>
+        </div>
+    </div>
+</body>
+{% endblock %}
