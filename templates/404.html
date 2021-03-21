@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title> 404 </title>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="../static/about.css">
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="error-message-container">
+        <div class="row error-message">
+            <h2 class="error-heading ">404!!</h2>
+            <h3 class="error-heading ">Oh no!
+                <br> Doesn 't look like there's any food here!</h3>
+            <a class="error-button" href="">home</a>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
