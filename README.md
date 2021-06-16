@@ -8,6 +8,7 @@ Our app is designed for college students by college students to help you find lo
 Using the **YELP API**, we have filtered all restaurants by the cheapest with ratings above 3.5. 
 
 **HOW TO USE CHEAP EATS**
+
 Once a user logs in, they are brought to our homepage where they can browse all the restaurants near them. They can click on each card and will then be brought to a detail page where they can then see reviews, rating, and the address/hours of the restaurant.
 
 **WHAT'S NEXT FOR CHEAP EATS?**
