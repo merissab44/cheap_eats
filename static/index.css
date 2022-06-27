@@ -1,0 +1,26 @@
+body {
+    background: url("../static/images/first.jpeg");
+    width: 100vw;
+    height: 100vh;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 80%;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    margin-left: 50%;
+    margin-top: 45%;
+    background: #b62d2d;
+    border-radius: 5%;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
