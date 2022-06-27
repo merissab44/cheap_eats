@@ -13,10 +13,10 @@ BUSINESS_ENDPOINT = 'https://api.yelp.com/v3/businesses/search'
 HEADERS = {'Authorization': 'bearer %s' % API_KEY}
 
 
-# Define our parameters
+# Define our parameters and what we want a response to be
 PARAMETERS = {
     'categories': 'food',
-    'limit': 20,
+    'limit': 30,
     'radius': 10000,
     'price': 1,
     'is_close': False,
