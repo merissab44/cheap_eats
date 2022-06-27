@@ -33,8 +33,6 @@ def display_categories():
     business_array = []
     for biz in category_data['businesses']:
         business_array.append(biz)
-        # print the display address
-        print(biz['location']['display_address'])
     return render_template('index.html', context=business_array)
 
 
