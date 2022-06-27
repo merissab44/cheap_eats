@@ -16,7 +16,7 @@ HEADERS = {'Authorization': 'bearer %s' % API_KEY}
 # Define our parameters and what we want a response to be
 PARAMETERS = {
     'categories': 'food',
-    'limit': 30,
+    'limit': 20,
     'radius': 10000,
     'price': 1,
     'is_close': False,
