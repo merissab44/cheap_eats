@@ -1,11 +1,11 @@
 {% extends 'base.html'%}
 
 {% block title %}
-    <title>Feed Page</title>
+<title>Feed Page</title>
 {% endblock%}
 
 {% block styles %}
-    <link rel="stylesheet" href="../static/styles.css">
+<link rel="stylesheet" href="../static/styles.css">
 {% endblock %}
 
 {% block content %}
@@ -13,104 +13,52 @@
 <div class="container">
     <div class="row">
 
-        <div class="jumbotron jumbotron-fluid rounded" style="
-        height: 300px;
-        margin: 20px;
-        background-image: url('../static/images/jumbotron.jpeg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        ">
-            <div class="container" >
-            </div>
+   
+
+        <!-- Most popular category -->
+
+        <div class="row">
+            <h3 class="text-center" id="category">Most Popular</h3>
+            <a class="text-center" id="button" href="../templates/about.html">See all</a>
         </div>
-
-        <!--Most popular category -->
-        <h3>Most popular</h3>
-
         <div class="container" id="popular">
-                <div class=" col-3 card carousel slide shadow-sm"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/food.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>Chicken Sandwhich</h4>
-                    <p class="card-text"> $15</p>
-                    <small>1234 Main st. </small>
-                    </div>
+            {% for i in context %}
+            <div class=" col-3 card">
+                <img src="{{i.image_url}}" class="card-img-top" alt="..." data-toggle="modal" data-target="#listing">
+                <div class="card-body">
+                    <h5 class="text-center">{{i.name}}</h5>
+                    <small>{{i.location.display_address}}</small>
                 </div>
-                <div class=" col-3 card carousel slide shadow-sm"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/skew.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>Skewer</h4>
-                    <p class="card-text">$12</p>
-                    <small>1234 NW st. </small>
-                    </div>
-                </div>
-                <div class=" col-3 card carousel slide shadow-sm"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/toast.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>French Toast</h4>
-                    <p class="card-text">$8</p>
-                    <small>1234 NE Main St.</small>
-                    </div>
-                </div>
-                <div class=" col-3 card carousel slide shadow-sm"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/toast.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>French Toast</h4>
-                    <p class="card-text">$8</p>
-                    <small>1234 NE Main St.</small>
-                    </div>
-                </div>
-                <div class=" col-3 card carousel slide shadow-sm"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/toast.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>French Toast</h4>
-                    <p class="card-text">$8</p>
-                    <small>1234 NE Main St.</small>
-                    </div>
-                </div>
-                <div class=" col-3 card carousel slide shadow-sm"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/toast.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>French Toast</h4>
-                    <p class="card-text">$8</p>
-                    <small>1234 NE Main St.</small>
-                    </div>
-                </div>
-        </div>
+                <div class="modal fade" id="listing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <img src="{{i.image_url}}">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
 
-        <!-- Cheap Eats -->
-
-        <h3>Under $15 </h3>
-        <div class="container">
-            <div class="row">
-                <div class="card carousel slide"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/food.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>Chicken Sandwhich</h4>
-                    <p class="card-text"> $15</p>
-                    <small>1234 Main st. </small>
-                    </div>
-                </div>
-                <div class="card carousel slide"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/skew.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>Skewer</h4>
-                    <p class="card-text">$12</p>
-                    <small>1234 NW st. </small>
-                    </div>
-                </div>
-                <div class="card carousel slide"  data-ride="carousel" style="width: 18rem;">
-                    <img src="../static/images/toast.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h4>French Toast</h4>
-                    <p class="card-text">$8</p>
-                    <small>1234 NE Main St.</small>
+                            <div class="modal-body ">
+                                <p> Modal Box Description.
+                                    sdc
+                                    dfvdv
+                                    sscg sdgscsc dfvfd
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            {% endfor %}
 </div>
+
+    <footer>
+        <p>&copy; Cheap Eats </p>
+    </footer>
 
 {% endblock %}
